@@ -10,3 +10,5 @@ class ApartmentIndex extends Component {
         )
     }
 }
+
+export default ApartmentIndex
