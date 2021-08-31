@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 class Header extends Component {
   render() {
     return (
-      <div className="header" >
+      <div className="header">
         {this.props.routes.logged_in && (
           <div>
+            <h1>{this.props.routes.current_user.email}</h1>
             <a href={this.props.routes.sign_out_route}>Sign Out</a>
           </div>
         )}
@@ -16,7 +17,7 @@ class Header extends Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 }
 export default Header;
