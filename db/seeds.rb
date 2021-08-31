@@ -1,7 +1,45 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+users = [
+    {
+        email: 'andy@testing.com',
+        password: 'testing',
+        password_confirmation: 'testing'
+    }
+]
+
+users.each do |attribute|
+    User.create attribute
+end
+
+apartments =[
+    {
+      street: 'A Street',
+      city: 'SD',
+      state: 'CA',
+      manager: 'Andy',
+      email: 'andy@testing.com',
+      price: '$10,000',
+      bedrooms: 1,
+      bathrooms: 0,
+      pets: 'all pets welcome',
+      img:"https://static.tvtropes.org/pmwiki/pub/images/squidbox.png"
+    },
+
+    {
+      street: 'B Street',
+      city: 'SD',
+      state: 'CA',
+      manager: 'Andy',
+      email: 'andy@testing.com',
+      price: '$9,999',
+      bedrooms: 1,
+      bathrooms: 0,
+      pets: 'no sea snails',
+      img:"https://i.redd.it/8dpft4l0agr61.jpgc"
+    }
+  ]
+  
+  first_user = User.where(email: 'andy@testing.com').first
+  
+  apartments.each do |attribute|
+    first_user.apartments.create attribute
+  end

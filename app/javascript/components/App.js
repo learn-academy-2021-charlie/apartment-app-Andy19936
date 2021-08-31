@@ -10,6 +10,12 @@ import ApartmentEdit from "./pages/ApartmentEdit";
 import NotFound from "./pages/NotFound";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      apartments: [],
+    };
+  }
   render() {
     const {
       logged_in,
