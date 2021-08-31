@@ -6,7 +6,7 @@ class ApartmentIndex extends Component {
   render() {
     return (
       <div>
-        <h1> See Our Apartments</h1>
+        <h1> See our Apartments</h1>
         <Col sm="6">
           {this.props.apartments &&
             this.props.apartments.map((apartment) => {
