@@ -16,6 +16,18 @@ class App extends Component {
       apartments: [],
     };
   }
+
+  componentDidMount() {
+    this.readApartment();
+  }
+
+  readApartment = () => {
+    fetch("/apartments")
+      .then((response) => response.json())
+      .then((apartmentArray) => this.setState({ apartments: apartmentArray }))
+      .catch((errors) => console.log("apartments read errors:", errors));
+  };
+
   render() {
     const {
       logged_in,
@@ -30,7 +42,12 @@ class App extends Component {
         <Header routes={this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/apartmentindex" component={ApartmentIndex} />
+          <Route
+            path="/apartmentindex"
+            render={(props) => (
+              <ApartmentIndex apartments={this.state.apartments} />
+            )}
+          />
           <Route path="/apartmentshow/:id" component={ApartmentShow} />
           <Route path="/apartmentnew" component={ApartmentNew} />
           <Route path="/apartmentedit/:id" component={ApartmentEdit} />
