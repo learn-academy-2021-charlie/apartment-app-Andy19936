@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, Col } from 'reactstrap'
+import { NavLink } from "react-router-dom";
+import { Card, CardTitle, Col, CardImg } from "reactstrap";
 
 class ApartmentIndex extends Component {
     render() {
