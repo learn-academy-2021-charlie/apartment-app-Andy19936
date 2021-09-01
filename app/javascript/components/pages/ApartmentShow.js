@@ -19,9 +19,10 @@ class ApartmentShow extends Component {
               {this.props.apartment && this.props.apartment.street}
             </CardTitle> */}
             <CardText>
-            <br />
-               <h3>Street</h3> {this.props.apartment && this.props.apartment.street}
-               <br/>
+              <br />
+              <h3>Street</h3>{" "}
+              {this.props.apartment && this.props.apartment.street}
+              <br />
               <h3>City </h3> {this.props.apartment && this.props.apartment.city}
               <br />
               <h3>State</h3>{" "}
@@ -37,7 +38,7 @@ class ApartmentShow extends Component {
               {this.props.apartment && this.props.apartment.price}
               <br />
               <h3>Bedrooms</h3>{" "}
-              {this.props.apartment && this.props.apartment.manager}
+              {this.props.apartment && this.props.apartment.bedrooms}
               <br />
               <h3>Bathrooms</h3>{" "}
               {this.props.apartment && this.props.apartment.bathrooms}
