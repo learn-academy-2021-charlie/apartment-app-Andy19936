@@ -34,7 +34,7 @@ apartments =[
       bedrooms: 1,
       bathrooms: 0,
       pets: 'no sea snails',
-      img:"https://i.redd.it/8dpft4l0agr61.jpgc"
+      img:"https://static.tvtropes.org/pmwiki/pub/images/squidbox.png"
     }
   ]
   
