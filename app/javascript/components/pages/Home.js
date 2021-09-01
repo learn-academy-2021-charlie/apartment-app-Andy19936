@@ -11,7 +11,7 @@ import ApartmentIndex from "./ApartmentIndex";
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="page-body">
         <h1>this is the home page</h1>
         <Nav>
           <NavItem>

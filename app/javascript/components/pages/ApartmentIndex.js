@@ -5,7 +5,7 @@ import { Card, CardTitle, Col, CardImg } from "reactstrap";
 class ApartmentIndex extends Component {
   render() {
     return (
-      <div>
+      <div className="page-body">
         <h1> See our Apartments</h1>
         <Col sm="6">
           {this.props.apartments &&
