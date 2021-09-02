@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 class ApartmentShow extends Component {
   render() {
+    let { apartment } = this.props;
     return (
       <div className="page-body">
         <h1>{this.props.apartment && this.props.apartment.street}</h1>
@@ -51,8 +52,8 @@ class ApartmentShow extends Component {
         >
           <Button>Edit Your Apartment</Button>
         </NavLink>
-        <NavLink to={"/devindex"}>
-          <Button onClick={() => this.props.deleteJob(job.id)}>
+        <NavLink to={"/apartmentindex"}>
+          <Button onClick={() => this.props.deleteApartment(apartment.id)}>
             Delete Your Apartment
           </Button>
         </NavLink>

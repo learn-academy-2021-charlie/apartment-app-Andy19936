@@ -63,6 +63,18 @@ class App extends Component {
       .catch((errors) => console.log("apartment update errors:", errors));
   };
 
+  deleteApartment = (id) => {
+    fetch(`/apartments/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((payload) => this.readApartment())
+      .catch((errors) => console.log("apartment delete fetch errors:", errors));
+  };
+
   render() {
     const {
       logged_in,
@@ -90,7 +102,12 @@ class App extends Component {
               let apartment = this.state.apartments.find(
                 (apartment) => apartment.id === +id
               );
-              return <ApartmentShow apartment={apartment} />;
+              return (
+                <ApartmentShow
+                  apartment={apartment}
+                  deleteApartment={this.deleteApartment}
+                />
+              );
             }}
           />
           {logged_in && (
