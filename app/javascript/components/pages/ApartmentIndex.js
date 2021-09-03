@@ -4,8 +4,16 @@ import { Card, CardTitle, Col, CardImg } from "reactstrap";
 
 class ApartmentIndex extends Component {
   render() {
+    console.log(this.props.apartments);
     return (
       <div className="page-body">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <h1> See our Apartments</h1>
         <Col sm="6">
           {this.props.apartments &&
@@ -14,11 +22,14 @@ class ApartmentIndex extends Component {
                 <Card
                   className="indexCards"
                   style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    display: "flex",
                     backgroundColor: "#333",
                     borderColor: "#989",
                     height: "130px",
                     width: "500px",
-                    borderRadius: "100px 10px ",
+                    borderRadius: "80px 100px ",
                     fontFamily: "sans-serif",
                     fontSize: "35px",
                     textAlign: "center",
@@ -28,6 +39,12 @@ class ApartmentIndex extends Component {
                   body
                   key={apartment.id}
                 >
+                  <CardImg
+                    top
+                    width="100%"
+                    src={apartment.img}
+                    alt="apartment picture"
+                  />
                   <CardTitle>
                     <NavLink
                       style={{

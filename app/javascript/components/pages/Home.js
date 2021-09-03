@@ -5,21 +5,34 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { Nav, NavItem } from "reactstrap";
+import { Nav, NavItem, Jumbotron, Container } from "reactstrap";
 import ApartmentIndex from "./ApartmentIndex";
 
 class Home extends Component {
   render() {
     return (
-      <div className="page-body">
-        <h1>this is the home page</h1>
-        <Nav>
-          <NavItem>
-            <NavLink to="/apartmentindex">
-              Check out our available Apartments
-            </NavLink>
-          </NavItem>
-        </Nav>
+      <div className="Home">
+        <Jumbotron fluid>
+          <Container>
+            <Nav>
+              <NavItem>
+                <NavLink
+                  to="/apartmentindex"
+                  href="/"
+                  // style={{
+                  //   alignContent: "center",
+                  //   fontWeight: "bold",
+                  //   color: "purple",
+                  //   fontFamily: "sans-serif",
+                  //   opacity: "0.4",
+                  // }}
+                >
+                  <h1>Check out our available Apartments</h1>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Container>
+        </Jumbotron>
       </div>
     );
   }

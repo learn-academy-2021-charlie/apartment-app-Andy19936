@@ -37,6 +37,13 @@ class ApartmentNew extends Component {
   render() {
     return (
       <div div className="page-body">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <h1>this is the new page</h1>
         <Form>
           <FormGroup>
