@@ -7,6 +7,12 @@ class ApartmentShow extends Component {
     let { apartment } = this.props;
     return (
       <div className="page-body">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h1>{this.props.apartment && this.props.apartment.street}</h1>
         <Col sm="6">
           <Card>
