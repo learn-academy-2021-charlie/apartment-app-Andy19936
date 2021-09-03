@@ -14,41 +14,44 @@ class ApartmentIndex extends Component {
         <br />
         <br />
 
-        <h1> See our Apartments</h1>
+        <h1> See Our Available Apartments</h1>
         <Col sm="6">
           {this.props.apartments &&
             this.props.apartments.map((apartment) => {
               return (
                 <Card
                   className="indexCards"
-                  style={{
-                    alignItems: "center",
-                    justifyContent: "center",
-                    display: "flex",
-                    backgroundColor: "#333",
-                    borderColor: "#989",
-                    height: "130px",
-                    width: "500px",
-                    borderRadius: "80px 100px ",
-                    fontFamily: "sans-serif",
-                    fontSize: "35px",
-                    textAlign: "center",
-                    padding: "95px",
-                    margin: "2px",
-                  }}
+                  style={
+                    {
+                      // alignItems: "center",
+                      // justifyContent: "center",
+                      // display: "flex",
+                      // backgroundColor: "#333",
+                      // borderColor: "#989",
+                      // height: "130px",
+                      // width: "500px",
+                      // borderRadius: "80px 100px ",
+                      // fontFamily: "sans-serif",
+                      // fontSize: "35px",
+                      // textAlign: "center",
+                      // padding: "95px",
+                      // margin: "2px",
+                    }
+                  }
                   body
                   key={apartment.id}
                 >
-                  <CardImg
-                    top
+                  {/* <CardImg
+                    bottom
                     width="100%"
                     src={apartment.img}
                     alt="apartment picture"
-                  />
+                  /> */}
+                  <br />
                   <CardTitle>
                     <NavLink
                       style={{
-                        color: "white",
+                        color: "black",
                         textDecoration: "none",
                         fontFamily: "sans-serif",
                         fontSize: "30px",
