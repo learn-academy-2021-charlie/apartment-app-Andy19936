@@ -16,30 +16,157 @@
 @import "bootstrap";
 
 .page-body {
-  margin-top: 19vh;
+  top: 0%;
   padding: 0%;
   text-align: center;
   min-height: 110vh;
-  width: 175vh;
-  background-color: darkslategray;
+  width: 173vh;
+  background-image: url("http://www.nateskorner.com/application/views/themes/theme-1/assets/img/background/404.jpg");
+  color: purple;
+  font-family: sans-serif;
 }
 
 .header {
+  display: flex;
+  a{
+    flex: 1;
+  }
+  border: black 2px;
+  border-style: solid;
   top: 0%;
   padding: 0%;
   margin: 0%;
   position: fixed;
-  width: 175vh;
+  width: 173vh;
+  color: purple;
   height: 19vh;
-  background-color: darkviolet;
+  background-color: rgb(1, 82, 65);
+  opacity: 0.9;
   overflow: hidden;
   font-size: 40px;
   text-align: right;
 }
 
 .add-apartment {
+  
   text-align: center;
   font-size: 20px;
   font-family: sans-serif;
   color: white;
 }
+
+//Home styling
+.Home {
+  align-items: center;
+  text-align: center;
+  margin-top: 19vh;
+  padding: 0%;
+  text-align: center;
+  min-height: 110vh;
+  width: 173vh;
+  font-family: sans-serif;
+  color: #d42626;
+  background-image: url("http://www.nateskorner.com/application/views/themes/theme-1/assets/img/background/404.jpg");
+}
+//End of Home styling
+
+//NotFound styling
+.not-found {
+  margin-top: 19vh;
+  padding: 0%;
+  text-align: center;
+  min-height: 110vh;
+  width: 173vh;
+  font-family: sans-serif;
+  color: #d42626;
+  background-image: url("http://www.nateskorner.com/application/views/themes/theme-1/assets/img/background/404.jpg");
+  h1 {
+    font-size: 11rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  h1:nth-of-type(1) {
+    animation: range 4s infinite;
+  }
+  h1:nth-of-type(2) {
+    left: 50%;
+    top: 50%;
+    animation: size 4s infinite;
+  }
+  h1:nth-of-type(3) {
+    animation: range2 4s infinite;
+  }
+  @keyframes range {
+    0% {
+      left: 42%;
+      top: 50%;
+      font-size: 11rem;
+    }
+    25% {
+      left: 50%;
+      top: 40%;
+      font-size: 4.5rem;
+    }
+    50% {
+      left: 58%;
+      top: 50%;
+      font-size: 11rem;
+    }
+    75% {
+      left: 50%;
+      top: 60%;
+      font-size: 4.5rem;
+    }
+    100% {
+      left: 42%;
+      top: 50%;
+      font-size: 11rem;
+    }
+  }
+  @keyframes range2 {
+    0% {
+      left: 58%;
+      top: 50%;
+      font-size: 11rem;
+    }
+    25% {
+      left: 50%;
+      top: 60%;
+      font-size: 4.5rem;
+    }
+    50% {
+      left: 42%;
+      top: 50%;
+      font-size: 11rem;
+    }
+    75% {
+      left: 50%;
+      top: 40%;
+      font-size: 4.5rem;
+    }
+    100% {
+      left: 58%;
+      top: 50%;
+      font-size: 11rem;
+    }
+  }
+  @keyframes size {
+    0% {
+      font-size: 11rem;
+    }
+    25% {
+      font-size: 26rem;
+    }
+    50% {
+      font-size: 11rem;
+    }
+    75% {
+      font-size: 26rem;
+    }
+    100% {
+      font-size: 11rem;
+    }
+  }
+}
+//end of NotFound styling

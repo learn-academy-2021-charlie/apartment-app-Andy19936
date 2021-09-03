@@ -59,7 +59,7 @@ class App extends Component {
       method: "PATCH",
     })
       .then((response) => response.json())
-      .then((payload) => this.readJob())
+      .then((payload) => this.readApartment())
       .catch((errors) => console.log("apartment update errors:", errors));
   };
 
@@ -91,9 +91,18 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route
             path="/apartmentindex"
-            render={(props) => (
-              <ApartmentIndex apartments={this.state.apartments} />
-            )}
+            render={(props) => {
+              let id = props.match.params.id;
+              let apartment = this.state.apartments.find(
+                (apartment) => apartment.id === +id
+              );
+              return (
+                <ApartmentIndex
+                  apartment={apartment}
+                  apartments={this.state.apartments}
+                />
+              );
+            }}
           />
           <Route
             path="/apartmentshow/:id"
@@ -128,7 +137,7 @@ class App extends Component {
               render={(props) => {
                 let id = props.match.params.id;
                 let apartment = this.state.apartments.find(
-                  (apartment) => apartment.id === +id
+                  (apt) => apt.id === +id
                 );
                 return (
                   <ApartmentEdit
